@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{# Adds title to browser tab #}
+{% block title %}{{ home.title }}{% endblock %}
+
+{# This is the content of the web page, displayed below the navbar #}
+{% block content %}
+<p>{{ home.headline }}</p>
+<p>{{ home.sub_headline }}</p>
+<p>{{ home.call_to_action }}</p>
+{% endblock %}

@@ -1,0 +1,40 @@
+.navbar {
+    min-height: 80px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 106%;
+    font-weight: 300;
+    color: #fff;
+}
+
+.navbar-nav {
+    padding-top: 15px;
+}
+
+.navbar-brand, #brand {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#brand {
+    width: 200px;
+}
+
+#navbar-links {
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width:768px){
+    .navbar-brand-centered {
+        position: absolute;
+        left: 50%;
+        display: block;
+        width: 200px;
+        text-align: center;
+    }
+    .navbar>.container .navbar-brand-centered, 
+    .navbar>.container-fluid .navbar-brand-centered {
+        margin-left: -100px;
+    }
+}
