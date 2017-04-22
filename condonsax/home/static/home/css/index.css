@@ -1,0 +1,44 @@
+#content {
+    background: url('../images/home-page-bg.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: calc(100vh - 80px); /* height of navbar */
+}
+
+#homepage-text {
+    display: block;
+    width: 35vw;
+    position: relative;
+    top: 25vh;
+    left: 62vw;
+}
+
+h1, h3 {
+    margin-top: 0;
+    text-shadow: 3px 3px 6px black; 
+}
+
+#homepage-text h1, h3 {
+    color: #ddd;
+}
+
+#homepage-text h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 7vh;
+    padding-bottom: 2vh;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+#homepage-text h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 3.5vh;
+    padding-bottom: 2vh;
+}
+
+#homepage-text a {
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 2vh;
+    letter-spacing: 1px;
+}
