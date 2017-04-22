@@ -19,6 +19,25 @@
     margin-bottom: 30px;
 }
 
+ul.social {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    list-style-type: none;
+    justify-content: center;
+}
+
+ul.social li {
+    margin: 10px;
+    display: block;
+    float: left;
+}
+
+.icon {
+    max-height: 45px;
+}
+
 .contact-form ul {
     list-style-type: none;
     padding: 0;
