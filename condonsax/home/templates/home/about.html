@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{# Adds page-specific header info #}
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/css/about.css' %}"/>
+{% endblock %}
+
+{# Adds title to browser tab #}
+
+{% block title %}{{ about.title }}{% endblock %}
+
+{# This is the content of the web page, displayed below the navbar #}
+{% block content %}
+<section id='about'>
+    <h1>{{ about.name }}</h1>
+    <h3>{{ about.birth_date }}</h3>
+    <img src="{% static 'home/images/about-page.jpg' %}" alt='{{ about.name }}' class="portrait">
+    <p>{{ about.bio|linebreaks }}</p>
+</section>
+{% endblock %}

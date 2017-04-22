@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/css/contact.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<!-- Display Success Message -->
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+<!-- End Success Message -->
+<section id="contact-page">
+    <h1>{{ contact.title }}</h1>
+    <!-- Display Form Errors -->
+    {% if form.errors %}
+        {% for field in form %}
+            {% for error in field.errors %}
+                <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
+    <!-- End Form Errors -->
+    <!-- Contact Page Image -->
+    <img class="portrait" src="{% static 'home/images/about-page.jpg' %}"/>
+    <!-- Contact Info/Form -->
+    <section id="contact-info">
+        <!-- Social Media Icons -->
+        <ul class="social">
+            {% if contact.facebook %}
+            <li>
+                <a href="{{ contact.facebook }}">
+                    <img class="icon" src="{% static 'home/images/facebook-icon.png' %}"/>
+                </a>
+            </li>
+            {% endif %}
+            {% if contact.youtube %}
+            <li>
+                <a href="{{ contact.youtube }}">
+                    <img class="icon" src="{% static 'home/images/youtube-icon.png' %}"/>
+                </a>
+            </li>
+            {% endif %}
+            {% if contact.twitter %}
+            <li>
+                <a href="{{ contact.twitter }}">
+                    <img class="icon" src="{% static 'home/images/twitter-icon.png' %}"/>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+        <!-- End Social Icons -->
+        <!-- Start Contact Form -->
+        <form action="" method="post" class="contact-form">
+            {% csrf_token %}
+            <ul class="contact">
+                {{ form.as_ul }}
+                <li><input type="submit" value="Email Me!"></li>
+            </ul>
+        </form>
+        <!-- End Contact Form -->
+    </section>
+</section>
+{% endblock %}

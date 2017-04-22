@@ -21,8 +21,8 @@ body {
 }
 
 .navbar-brand, #brand {
-    padding-top: 0;
-    margin-top: 0;
+    margin-top: 15px;
+    margin-left: -5px;
 }
 
 #brand {

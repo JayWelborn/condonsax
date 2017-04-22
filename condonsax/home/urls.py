@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 
-from .views import HomePageView
+from .views import HomePageView, AboutView, ContactView
 
 app_name = 'home'
 
 urlpatterns = [
+    url(r'^about/', AboutView.as_view(), name='about'),
+    url(r'^contact/', ContactView.as_view(), name='contact'),
     url(r'^$', HomePageView.as_view(), name='index'),
 ]

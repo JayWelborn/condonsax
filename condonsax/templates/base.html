@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/bootstrap-theme.min.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/home.css' %}"/>
     <link rel="shortcut icon" type="image/png" href="{% static 'home/images/favicon.png' %}"/>
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Playfair+Display+SC|Raleway:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Playfair+Display+SC|Raleway:300,400,500,700" rel="stylesheet">
     {% block header %}
     {% endblock %}
     <title>{% block title %}Chris Condon{% endblock %}</title>
@@ -37,8 +37,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="{% url 'home:index' %}">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="{% url 'home:about' %}">ABOUT</a></li>
+                <li><a href="{% url 'home:contact' %}">CONTACT</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">PROJECTS</a></li>

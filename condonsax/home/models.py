@@ -13,7 +13,7 @@ class HomePageText (models.Model):
 
     class Meta:
         verbose_name='Home Page'
-        verbose_name_plural = 'Home Pages'
+        verbose_name_plural = 'Home Page'
 
     def __str__(self):
         return self.headline
@@ -36,7 +36,7 @@ class HomePageTextFrench (models.Model):
 
     class Meta:
         verbose_name='French Home Page'
-        verbose_name_plural = 'French Home Pages'
+        verbose_name_plural = 'French Home Page'
 
     def __str__(self):
         return self.headline
@@ -59,7 +59,7 @@ class HomePageTextGerman (models.Model):
 
     class Meta:
         verbose_name='German Home Page'
-        verbose_name_plural = 'German Home Pages'
+        verbose_name_plural = 'German Home Page'
 
     def __str__(self):
         return self.headline
@@ -82,7 +82,7 @@ class HomePageTextSpanish (models.Model):
 
     class Meta:
         verbose_name='Spanish Home Page'
-        verbose_name_plural = 'Spanish Home Pages'
+        verbose_name_plural = 'Spanish Home Page'
 
     def __str__(self):
         return self.headline
@@ -107,7 +107,7 @@ class About (models.Model):
 
     class Meta:
         verbose_name='About Me Page'
-        verbose_name_plural='About Me Pages'
+        verbose_name_plural='About Me Page'
 
     def __str__(self):
         return 'About ' + self.name
@@ -115,6 +115,30 @@ class About (models.Model):
     title = models.CharField(max_length=40)
     name = models.CharField(max_length=50)
     birth_date = models.DateField()
-    # bio = tinymce.HTMLField() TODO install/configure TINYMCE
+    bio = models.TextField(blank=True) # TODO install/configure TINYMCE
     # about_image = models.ImageField TODO install Pillow for ImageField use
     pub_date = models.DateField(default=timezone.now)
+
+
+class Contact(models.Model):
+    """
+    Contact Page Details
+    title - displays in browser tab
+    facebook - link to facebook account
+    youtube - link to youtube channel
+    twitter - link to twitter account
+    pub_date - date contact form was created/updated. If there are multiple, only the most recent
+               one gets displayed
+    """
+
+    class Meta:
+        verbose_name_plural = 'Contact Page'
+
+    title = models.CharField(max_length=30)
+    facebook = models.URLField(blank=True)
+    youtube = models.URLField(blank=True)
+    twitter = models.URLField(blank=True)
+    pub_date = models.DateField(default=timezone.now)
+
+    def __str__(self):
+        return self.title

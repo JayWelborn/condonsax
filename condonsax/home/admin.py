@@ -8,4 +8,3 @@ class HomeAdmin(admin.ModelAdmin):
     ]
     list_display = ('title', 'pub_date')
     list_filter = ['pub_date']
-
