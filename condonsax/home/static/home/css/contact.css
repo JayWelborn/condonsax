@@ -1,41 +1,32 @@
-#contact-page {
-    width: 95%;
-    max-width: 760px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-}
 
 #contact-page h1 {
+    display: inline-block;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 48px;
-}
-
-.portrait {
-    float: right;
-    width: 33%;
-    margin-left: 30px;
-    margin-bottom: 30px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 ul.social {
+    margin-top: 5px;
     display: flex;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
     list-style-type: none;
-    justify-content: center;
+    justify-content: left;
+    margin-bottom: 20px;
 }
 
 ul.social li {
-    margin: 10px;
+    margin-right: 20px;
     display: block;
     float: left;
 }
 
 .icon {
-    max-height: 45px;
+    max-height: 41px;
 }
 
 .contact-form ul {
@@ -49,6 +40,22 @@ ul.social li {
     display: block;
     width: 100%;
     margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 2px;
+}
+
+.contact-form input[type=text], input[type=email] {
+    width: 182px;
+}
+
+.contact-form textarea {
+    width: 50%;
+}
+
+@media screen and (max-width:520px){
+    .contact-form textarea {
+        width: 80%;
+    }
 }
 
 .contact-form input[type=text], input[type=email], textarea {
@@ -60,16 +67,22 @@ ul.social li {
     background-color: rgba(255, 255, 255, .5);
     font-family: 'Open Sans', sans-serif;
     font-size: 90%;
+    transition: .2s ease-in-out;
 }
 
 .contact-form input[type=text]:hover, input[type=email]:hover, textarea:hover {
-    background-color: rgba(255, 255, 255, .7);
+    background-color: #aaa;
 }
 
 .contact-form input[type=text]:focus, input[type=email]:focus, textarea:focus{
     background-color: rgba(255, 255, 255, .7);
     border: 2px solid #67752b;
     margin: 1px;
+}
+
+.contact-form input[type=checkbox] {
+    margin-bottom: 10px;
+    margin-left: 2px;    
 }
 
 .contact-form textarea {

@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    overflow-y: scroll;
 }
 
 body {
@@ -47,4 +48,19 @@ body {
     .navbar>.container-fluid .navbar-brand-centered {
         margin-left: -100px;
     }
+}
+
+.portrait {
+    float: right;
+    width: 38%;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+#contact-page, #about {
+    width: 90%;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
 }
