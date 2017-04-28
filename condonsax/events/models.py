@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils import timezone
 
+from tinymce import HTMLField
+
 # Events is a model for upcoming concerts/lectures
 class Event (models.Model):
     """
@@ -18,8 +20,11 @@ class Event (models.Model):
     def __str__(self):
         return self.title
 
-    title = models.CharField(max_length=50)
-    slug = models.SlugField(max_length=50)
-    event_date = models.DateField
+    title = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=100)
+    event_date = models.DateField(default=timezone.now)
+    event_time = models.TimeField(default=timezone.now)
     pub_date = models.DateField(default=timezone.now)
     event_image = models.ImageField(upload_to='media/%Y/%m/%d', blank=True)
+    location = models.CharField(max_length=140, blank=True, default='None')
+    write_up = HTMLField('Body', default='Even Write Up Here')

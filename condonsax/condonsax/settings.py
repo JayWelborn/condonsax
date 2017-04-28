@@ -37,12 +37,14 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'home',
+    'events',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +130,36 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Media files (images uploaded via admin page/authenticated users)
+# https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-MEDIA_ROOT
+MEDIA_URL = '/media/'
+
+# Enable tinyMCE plugins
+TINYMCE_DEFAULT_CONFIG = {
+    'selector': 'textarea',
+    'theme': 'modern',
+    'plugins': 'link image preview codesample contextmenu table charmap textcolor colorpicker '
+                'hr paste textpattern',
+    'toolbar1': 'bold italic underline forecolor backcolor| alignleft aligncenter alignright alignjustify '
+               '| bullist numlist | outdent indent | table | link image | preview code | charmap ',
+    'contextmenu': 'formats | link image | forecolor backcolor',
+    'menubar': True,
+    'inline': False,
+    'statusbar': True,
+    'height': 360,
+    'paste_data_images': True,
+    'textpattern_patterns': [
+        {'start': '*', 'end': '*', 'format': 'italic'},
+        {'start': '**', 'end': '**', 'format': 'bold'},
+        {'start': '#', 'format': 'h1'},
+        {'start': '##', 'format': 'h2'},
+        {'start': '###', 'format': 'h3'},
+        {'start': '####', 'format': 'h4'},
+        {'start': '#####', 'format': 'h5'},
+        {'start': '######', 'format': 'h6'},
+        {'start': '1. ', 'cmd': 'InsertOrderedList'},
+        {'start': '* ', 'cmd': 'InsertUnorderedList'},
+        {'start': '- ', 'cmd': 'InsertUnorderedList'}
+    ],
+}
