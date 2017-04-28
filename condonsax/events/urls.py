@@ -20,5 +20,5 @@ from .views import EventView
 app_name = 'events'
 
 urlpatterns = [
-    url(r'^/$', EventView.as_view(), name='event'),
+    url(r'^$', EventView.as_view(), name='event'),
 ]

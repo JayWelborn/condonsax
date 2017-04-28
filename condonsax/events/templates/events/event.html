@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{# Adds page-specific header info #}
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{% static 'events/.css' %}"/>
+{% endblock %}
+
+{# Adds title to browser tab #}
+
+{% block title %}{{ Events }}{% endblock %}
+
+{# This is the content of the web page, displayed below the navbar #}
+{% block content %}
+<section id='events'>
+    <h1>Upcoming Events</h1>
+</section>
+{% endblock %}
