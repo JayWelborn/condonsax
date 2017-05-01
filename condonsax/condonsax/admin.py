@@ -6,7 +6,7 @@ from home.models import HomePageText, HomePageTextFrench, HomePageTextGerman, Ho
 
 #Events Admin and Models
 from events.admin import EventAdmin
-from events.models import Event
+from events.models import Event, Address
 
 class ChrisCondonAdmin(admin.sites.AdminSite):
     site_header = 'Chris Condon Administration'
@@ -20,3 +20,4 @@ condon_admin.register(HomePageTextSpanish, HomeAdmin)
 condon_admin.register(About)
 condon_admin.register(Contact)
 condon_admin.register(Event, EventAdmin)
+condon_admin.register(Address)

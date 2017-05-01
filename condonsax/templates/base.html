@@ -42,7 +42,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">PROJECTS</a></li>
-                <li><a href="#">EVENTS</a></li>
+                <li><a href="{% url 'events:event' %}">EVENTS</a></li>
                 <li><a href="#">ALBUMS</a></li>               
               </ul>
         </div>
@@ -57,6 +57,7 @@
 </main>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript" src="{% static 'home/js/bootstrap.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'home/js/home.js' %}"></script>
+{% block scripts %}
+{% endblock %}
 </body>
 </html>

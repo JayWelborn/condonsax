@@ -1,7 +1,7 @@
 #content {
     background: url('../images/home-page-bg.jpg') no-repeat center center;
     background-size: cover;
-    min-height: calc(100vh - 80px); /* height of navbar */
+    max-height: calc(100vh - 80px); /* minus height of navbar */
 }
 
 #homepage-text {
@@ -18,27 +18,67 @@ h1, h3 {
 }
 
 #homepage-text h1, h3 {
-    color: #ddd;
+    color: #f1f1f3;
 }
 
 #homepage-text h1 {
     font-family: 'Raleway', sans-serif;
-    font-size: 7vh;
-    padding-bottom: 2vh;
-    letter-spacing: 3px;
     font-weight: 700;
+    font-size: 48px;
+    width: 100%;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
 }
 
 #homepage-text h3 {
     font-family: 'Playfair Display', serif;
+    font-size: 32px;
     font-style: italic;
-    font-size: 3.5vh;
-    padding-bottom: 2vh;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
 }
 
 #homepage-text a {
     font-family: 'Raleway';
     font-weight: 400;
-    font-size: 2vh;
+    font-size: 16px;
     letter-spacing: 1px;
+    background: #Cf7b67;
+    color: #f1f1f3;
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 6px black;
+    transition: all .2s;
+    transition-timing-function: ease-in-out;
+}
+
+#homepage-text a:hover {
+    text-decoration: none;
+    background: #765c80;
+}
+
+@media screen and (max-width:760px){
+    #homepage-text {
+        top: 40vh;
+        left: 55vw;
+        width: 50vw;
+        word-wrap: break-word;
+        margin: 0;
+        padding: 0;
+    }
+
+    #homepage-text h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    #homepage-text h3 {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    #homepage-text a {
+        font-size: 12px;
+        padding: 7px 14px;
+    }
 }

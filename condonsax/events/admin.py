@@ -12,7 +12,7 @@ class EventAdmin(admin.ModelAdmin):
         ('Event and Publication Dates', {'fields': ['event_date', 'pub_date']}),
         ('Event Time', {'fields': ['event_time']}),
         ('Image', {'fields': ['event_image']}),
-        ('Location and Information', {'fields': ['location', 'write_up']}),
+        ('Location and extra Information', {'fields': ['location','write_up']}),
     ]
     prepopulated_fields = {'slug': ('title',)}
     list_display = ('title', 'pub_date')

@@ -1,0 +1,129 @@
+#events {
+    width: 90%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+#events h1 {
+    width: 100%;
+    max-width: 800px;
+    padding: 50px 30px 50px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: #f6f7f6;
+    box-shadow: 3px 3px 6px black;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    width: 100%;
+}
+
+.event-card {
+    background: #f6f7f6;
+    -webkit-box-shadow: 3px 3px 6px black;
+    -moz-box-shadow: 3px 3px 6px black;
+    box-shadow: 3px 3px 6px black;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+    display: inline-block;
+    width: 100%;
+}
+
+.event-card img {
+    float: right;
+    width: 50%;
+    border-radius: 0px 5px 0px 5px;
+}
+
+.event-text {
+    padding: 30px;
+    font-family: 'Raleway';
+    font-size: 15px;
+}
+
+.event-text h3 {
+    display: inline-block;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 32px;
+    font-style: italic;
+    padding: 0px 20px 20px 0px;
+    width: 50%;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+@media screen and (max-width:768px){
+    .event-text h3 {
+        font-size: 24px;
+    }
+}
+
+.event-text .event-date {
+    line-height: 1.41;
+    margin-bottom: 20px;
+}
+
+.event-text address {
+    line-height: .75;
+}
+
+.event-text address .venue {
+    font-weight: 700;
+}
+
+.event-text .write-up {
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    transition: .5s ease-in-out;
+}
+
+.event-text .write-up.visible {
+    max-height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    transition: .5s ease-in-out;
+    margin-bottom: ;
+}
+
+.event-text .button {
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 30px;
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    background: #f6f7f6;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: .2s ease-in-out;
+    -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 1);
+}
+
+.event-text .button:hover {
+    transition: .2s ease-in-out;
+    color: #f6f7f6;
+    background: #203446;
+}
+
+.event-card.past {
+    color: #777;
+}
+
+.event-card.past img{
+    opacity: .5;
+}
