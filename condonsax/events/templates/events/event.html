@@ -8,15 +8,13 @@
 
 {# Adds title to browser tab #}
 
-{% block title %}{{ Events }}{% endblock %}
+{% block title %}Events{% endblock %}
 
 {# This is the content of the web page, displayed below the navbar #}
 {% block content %}
-<section id='fullpage'>
-    <h1>Upcoming Events</h1>
-</section>
 
 <section id='events'>
+<h1>Upcoming Events</h1>
 {# this runs if there are future events #}
     {% if future_events %}
         {% for event in future_events %}

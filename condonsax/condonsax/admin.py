@@ -4,9 +4,13 @@ from django.contrib import admin
 from home.admin import HomeAdmin
 from home.models import HomePageText, HomePageTextFrench, HomePageTextGerman, HomePageTextSpanish, About, Contact
 
-#Events Admin and Models
+# Events Admin and Models
 from events.admin import EventAdmin
 from events.models import Event, Address
+
+# Albums Admin and Models
+from albums.models import Composer, Album
+from albums.admin import AlbumAdmin
 
 class ChrisCondonAdmin(admin.sites.AdminSite):
     site_header = 'Chris Condon Administration'
@@ -21,3 +25,5 @@ condon_admin.register(About)
 condon_admin.register(Contact)
 condon_admin.register(Event, EventAdmin)
 condon_admin.register(Address)
+condon_admin.register(Album, AlbumAdmin)
+condon_admin.register(Composer)

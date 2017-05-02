@@ -1,6 +1,5 @@
 from django.contrib import admin
 
-from .models import Event
 
 # Register your models here.
 class EventAdmin(admin.ModelAdmin):
@@ -15,5 +14,5 @@ class EventAdmin(admin.ModelAdmin):
         ('Location and extra Information', {'fields': ['location','write_up']}),
     ]
     prepopulated_fields = {'slug': ('title',)}
-    list_display = ('title', 'pub_date')
-    list_filter = ['pub_date']
+    list_display = ('location', 'event_date', 'title',)
+    list_filter = ['event_date']

@@ -38,6 +38,7 @@ ALLOWED_HOSTS = [
 INSTALLED_APPS = [
     'home',
     'events',
+    'albums',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -163,3 +164,6 @@ TINYMCE_DEFAULT_CONFIG = {
         {'start': '- ', 'cmd': 'InsertUnorderedList'}
     ],
 }
+
+# Change max upload size for large Mp3s
+FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760

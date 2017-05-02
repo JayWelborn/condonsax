@@ -74,9 +74,9 @@ ul.social li {
     resize: none;
 }
 
-@media screen and (max-width:455px){
+@media screen and (max-width:470px){
     .contact-form input[type=text], input[type=email] {
-        width: 40%;
+        width: 49%;
     }
 
     .contact-form textarea {

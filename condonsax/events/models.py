@@ -43,7 +43,7 @@ class Event (models.Model):
         verbose_name_plural='Events'
 
     def __str__(self):
-        return self.title + str(self.location)
+        return "{} {}".format(self.event_date, self.title)
 
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100)
