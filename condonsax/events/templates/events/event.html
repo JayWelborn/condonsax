@@ -13,20 +13,20 @@
 {# This is the content of the web page, displayed below the navbar #}
 {% block content %}
 
-<section id='events'>
+<section id='list-page'>
 <h1>Upcoming Events</h1>
 {# this runs if there are future events #}
     {% if future_events %}
         {% for event in future_events %}
         <!-- wrapper for card -->
-        <div class='event-card'>
+        <div class='card'>
             {% if event.event_image%}
                 <img src='{{ event.event_image.url }}' alt='{{ event.title }}'>
             {% endif %}
             <!-- wrapper for text on card -->
-            <div class='event-text'>
+            <div class='card-text'>
                 <h3>{{ event.title }}</h3>
-                <p class='event-date'>{{ event.event_date }} at {{ event.event_time }}</p>
+                <p class='card-date'>{{ event.event_date }} at {{ event.event_time }}</p>
 
                 <address class='event-address'>
                     <p class='venue'>{{ event.location.venue_name }}</p>
@@ -51,8 +51,8 @@
         </div>
         {% endfor %}
     {% else %}
-    <div class='event-card'>
-        <div class='event-text'><h3>More Events Coming Soon</h3></div>
+    <div class='card'>
+        <div class='card-text'><h3>More Events Coming Soon</h3></div>
     </div>
     {% endif %}
 
@@ -62,12 +62,12 @@
     {% if past_events %}
         {% for event in past_events %}
         <!-- wrapper for card -->
-        <div class='event-card past'>
+        <div class='card past'>
             {% if event.event_image%}
                 <img src='{{ event.event_image.url }}' alt='{{ event.title }}'>
             {% endif %}
             <!-- wrapper for text on card -->
-            <div class='event-text'>
+            <div class='card-text'>
                 <h3>{{ event.title }}</h3>
                 <p class='event-date'>{{ event.event_date }} at {{ event.event_time }}</p>
 

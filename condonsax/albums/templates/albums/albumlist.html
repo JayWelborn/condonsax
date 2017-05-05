@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{% static 'albums/albums.css' %}"/>
+{% endblock %}
+
 {% block content %}
 
 {% if not album_list %}
@@ -9,8 +13,22 @@
 </section>
 
 {% else %}
-<section id='fullpage'>
-    <h1>Albums Will Display Here</h1>
+<section id='list-page'>
+<h1>Albums</h1>
+    {% for album in album_list %}
+    <div class='card'>
+        <img class='album-cover' src='{{ album.cover.url }}' alt='{{ album.title }}'>
+        <div class='card-text'>
+            <h3>{{ album.title }}</h3>
+            <p class='card-date'>Released: {{ album.release_date }}</p>
+        </div>
+        <div class='tracks'>
+        {% for track in album.tracks.all %}
+            <p class='single-track'>{{ track.title }}</p>
+        {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
 </section>
 
 {% endif %}

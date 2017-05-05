@@ -1,0 +1,18 @@
+.card img {
+    float: left;
+    border-radius: 5px 0px 5px 0px;
+}
+
+.card-text {
+    width: 45%;
+    display: inline-block;
+}
+
+.card-text h3 {
+    padding: 0px 0px 20px 0px;
+}
+
+.card-date {
+    position: relative;
+    left: 20;
+}

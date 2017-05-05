@@ -96,6 +96,7 @@ class AlbumTrack (models.Model):
     def __str__(self):
         return self.title
 
+    track_num = models.IntegerField('Track Number', default=0)
     title = models.CharField(max_length=50)
     album = models.ForeignKey(Album, related_name='tracks')
     composer = models.ForeignKey(Composer, related_name='pieces')
