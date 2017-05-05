@@ -17,15 +17,15 @@
 
 .purchase {
     position: absolute;
-    bottom: 20px;
-    right: 10px;
+    bottom: 30px;
+    right: 30px;
     max-width: 90px;
     margin: 20px 10px 0px 0px;
 }
 
 #amazon {
-    right: 120px;
-    bottom: 22px;
+    right: 130px;
+    bottom: 32px;
 }
 
 .track-list {
@@ -55,12 +55,7 @@ p.track-info {
 }
 
 @media screen and (max-width:800px){
-    .card {
-        padding-bottom: 45px;
-    }
-
-    .card img.album-cover {
+    .card img {
         width: 100%;
-        border-radius: 0px;
     }
 }

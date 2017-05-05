@@ -20,16 +20,36 @@
         <img class='album-cover' src='{{ album.cover.url }}' alt='{{ album.title }}'>
         <div class='card-text'>
             <h3>{{ album.title }}</h3>
-            <p class='card-date'>Released: {{ album.release_date }}</p>
+            <p class='card-date'>
+                Released: {{ album.release_date }}
+            </p>
+            <ol class='track-list'>
+            {% for track in album.tracks.all %}
+                <li class='single-track'>
+                    <p class='track-info'>
+                        <span class='title'>{{ track.title }}</span>&nbsp;&nbsp;&nbsp; 
+                        <span class='composer'>{{ track.composer }}</span>
+                    </p>
+                    <audio controls>
+                        <source src="{{ track.audio_sample.url }}" type="audio/mp3">
+                        Your browser does not support the audio tag.
+                    </audio>
+                </li>
+            {% endfor %}
+            </ol>
         </div>
-        <div class='tracks'>
-        {% for track in album.tracks.all %}
-            <p class='single-track'>{{ track.title }}</p>
-        {% endfor %}
-        </div>
+        <a href='{{ album.album_amazon }}' target='_blank'>
+            <img class='purchase' id='amazon' src='{% static 'albums/images/amazon.gif' %}' alt='Buy From Amazon'>
+        </a>
+        <a href='{{ album.album_itunes }}' target='_blank'>
+            <img class='purchase' src='{% static 'albums/images/itunes.png' %}' alt='Get it on iTunes'>
+        </a>
     </div>
     {% endfor %}
 </section>
 
 {% endif %}
+{% endblock %}
+
+{% block scripts %}
 {% endblock %}
