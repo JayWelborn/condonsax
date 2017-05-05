@@ -13,20 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls.static import static
-from django.conf import settings
-from django.conf.urls import include, url
-from django.contrib import admin
+from django.conf.urls import url
 
-from condonsax.admin import condon_admin
+from .views import AlbumListView
+
+app_name = 'albums'
 
 urlpatterns = [
-    url(r'^admin/', condon_admin.urls),
-    url(r'albums/', include('albums.urls')),
-    url(r'^events/', include('events.urls')),
-    url(r'^tinymce/', include('tinymce.urls')),
-    url(r'^', include('home.urls')),
+    url(r'^$', AlbumListView.as_view(), name='albums'),
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

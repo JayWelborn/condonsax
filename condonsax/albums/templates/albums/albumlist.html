@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if not album_list %}
+<section id='fullpage'>
+    <h1>Coming Soon</h1>
+</section>
+
+{% else %}
+<section id='fullpage'>
+    <h1>Albums Will Display Here</h1>
+</section>
+
+{% endif %}
+{% endblock %}
