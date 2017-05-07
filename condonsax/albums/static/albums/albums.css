@@ -31,7 +31,9 @@
 .track-list {
     padding: 0;
     font-family: 'Raleway';
-    font-weight: 400;   
+    font-weight: 400;
+    max-height: 50vh;
+    overflow-y: auto;   
 }
 
 p.track-info {

@@ -6,6 +6,7 @@ from .models import AlbumTrack
 class TrackInline(admin.TabularInline):
     model = AlbumTrack
     extra = 0
+    ordering = ['pk']
 
 
 class AlbumAdmin(admin.ModelAdmin):
