@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'home',
     'events',
     'albums',
+    'projects',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

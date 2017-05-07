@@ -27,6 +27,7 @@
             {% for track in album.tracks.all %}
                 <li class='single-track'>
                     <p class='track-info'>
+                        {{ track.pk }}. &nbsp;
                         <span class='title'>{{ track.title }}</span>&nbsp;&nbsp;&nbsp; 
                         <span class='composer'>{{ track.composer }}</span>
                     </p>

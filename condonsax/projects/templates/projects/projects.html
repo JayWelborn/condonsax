@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{# Adds page-specific header info #}
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{% static 'projects/projects.css' %}"/>
+{% endblock %}
+
+{# Adds title to browser tab #}
+
+{% block title %}Projects{% endblock %}
+
+{# This is the content of the web page, displayed below the navbar #}
+{% block content %}
+
+<section id='list-page'>
+<h1>Projects</h1>
+    {% if project_list %}
+    {% for project in project_list %}
+    <!-- wrapper for card -->
+    <div class='card'>
+        {% if event.event_image %}
+            <img src='{{ event.event_image.url }}' alt='{{ event.title }}'>
+        {% endif %}
+        <!-- wrapper for text on card -->
+        <div class='card-text'>
+            <h3>{{ event.title }}</h3>
+            <p class='card-date'>{{ event.event_date }} at {{ event.event_time }}</p>
+
+            <address class='event-address'>
+                <p class='venue'>{{ event.location.venue_name }}</p>
+                <!-- link wrapper to google maps for address -->
+                <a href = '//maps.google.com/maps?q={{ event.location.street_address}} {{ event.location.city }} {{ event.location.state_or_country }} {{ event.location.postal_code }}'
+                    target='_blank'>
+                    <p class='street'>{{ event.location.street_address }}</p>
+                    <p class='city-state-zip'>
+                        {{ event.location.city }}, {{ event.location.state_or_country }} 
+                        {{ event.location.postal_code }}
+                    </p>
+                </a>
+            </address>
+            {% if event.write_up %}
+            <!-- container for event write-up. Defaults to hidden, but can be expanded with button click -->
+            <section class='write-up'>
+                {{ event.write_up|safe }}
+            </section>
+            <span class='button'>Read More</span>
+            {% endif %}
+        </div>
+    {% endfor %}
+    {% else %}
+    {% endif %}
+        <!-- wrapper for card -->
+
+        </div>
+        {% endfor %}
+    {% else %}
+    <div class='card'>
+        <div class='card-text'><h3>More Events Coming Soon</h3></div>
+    </div>
+    {% endif %}
+
+    <h1>Past Events</h1>
+
+    {# this runs if there are past events #}
+    {% if past_events %}
+        {% for event in past_events %}
+        <!-- wrapper for card -->
+        <div class='card past'>
+            {% if event.event_image%}
+                <img src='{{ event.event_image.url }}' alt='{{ event.title }}'>
+            {% endif %}
+            <!-- wrapper for text on card -->
+            <div class='card-text'>
+                <h3>{{ event.title }}</h3>
+                <p class='event-date'>{{ event.event_date }} at {{ event.event_time }}</p>
+
+                <address class='event-address'>
+                    <p class='venue'>{{ event.location.venue_name }}</p>
+                    <!-- link wrapper to google maps for address -->
+                    <a href = '//maps.google.com/maps?q={{ event.location.street_address }} {{ event.location.city }} {{ event.location.state_or_country }} {{ event.location.postal_code }}'
+                        target='_blank'>
+                        <p class='street'>{{ event.location.street_address }}</p>
+                        <p class='city-state-zip'>
+                            {{ event.location.city }}, {{ event.location.state_or_country }} 
+                            {{ event.location.postal_code }}
+                        </p>
+                    </a>
+                </address>
+            </div>
+        </div>
+        {% endfor %}
+    {% endif %}
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'events/events.js' %}"></script>
+{% endblock %}

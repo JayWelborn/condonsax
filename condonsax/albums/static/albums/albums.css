@@ -4,11 +4,13 @@
 
 .card img.album-cover {
     float: left;
-    border-radius: 5px 0px 5px 0px;
+    border-radius: 5px 0px 0px 5px;
 }
 
 .card-text {
-    display: inline-block;
+    display: block;
+    float: right;
+    width: 50%;
 }
 
 .card-text p.card-date {
@@ -32,8 +34,13 @@
     padding: 0;
     font-family: 'Raleway';
     font-weight: 400;
-    max-height: 50vh;
+    max-height: 214px;
     overflow-y: auto;   
+    margin-bottom: 80px;
+}
+
+.track-list li {
+    margin-bottom: 10px;
 }
 
 p.track-info {
@@ -47,13 +54,15 @@ p.track-info {
 
 .track-info .composer {
     font-style: italic;
+    display: inline-block;
+    float: right;
 }
 
 .single-track audio {
     display: inline-block;
     max-width: 96px;
     padding: 0;
-    margin-left: -15px;
+    margin-left: 12px;
 }
 
 @media screen and (max-width:800px){

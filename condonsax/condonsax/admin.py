@@ -12,6 +12,10 @@ from events.models import Event, Address
 from albums.models import Composer, Album
 from albums.admin import AlbumAdmin
 
+# Projects Admin and Models
+from projects.models import Project, Tag
+from projects.admin import ProjectAdmin
+
 class ChrisCondonAdmin(admin.sites.AdminSite):
     site_header = 'Chris Condon Administration'
     site_title = 'Chris Condon Administration'
@@ -27,3 +31,5 @@ condon_admin.register(Event, EventAdmin)
 condon_admin.register(Address)
 condon_admin.register(Album, AlbumAdmin)
 condon_admin.register(Composer)
+condon_admin.register(Project, ProjectAdmin)
+condon_admin.register(Tag)
