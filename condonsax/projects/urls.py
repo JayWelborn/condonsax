@@ -11,5 +11,5 @@ urlpatterns = [
     # ex /projects/tags/pk/tag-slug-here
     url(r'tags/(?P<pk>[0-9]+)/(?P<slug>[-\w\d]+)/', TagDetailView.as_view(), name='tag_detail'),
     # ex: /projects/
-    url(r'^$', IndexView.as_view(), name='index'),
+    url(r'^$', IndexView.as_view(), name='projects'),
 ]

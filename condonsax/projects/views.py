@@ -20,8 +20,8 @@ class IndexView(generic.ListView):
         """
         Return projects sorted by date
         """
-        entries = Entry.objects.distinct()
-        return entries.filter(
+        projects = Project.objects.distinct()
+        return projects.filter(
             pub_date__lte=timezone.now()
         ).order_by('-pub_date')
 
@@ -36,7 +36,7 @@ class DetailView(generic.DetailView):
 
 class TagListView(generic.ListView):
     """
-    View all entries assiciated with a certain tag
+    View all projects assiciated with a certain tag
     """
     model = Tag
     template_name = 'projects/tag_list.html'
