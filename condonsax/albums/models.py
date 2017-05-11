@@ -101,3 +101,4 @@ class AlbumTrack (models.Model):
     composer = models.ForeignKey(Composer, related_name='pieces')
     composition_date = models.DateField(default=timezone.now, blank=True, null=True)
     audio_sample = AudioFileField(max_upload_size=10485760)
+    full_audio = AudioFileField(max_upload_size=10485760, blank=True, null=True)
