@@ -7,7 +7,6 @@
 {% endblock %}
 
 {# Adds title to browser tab #}
-
 {% block title %}Projects{% endblock %}
 
 {# This is the content of the web page, displayed below the navbar #}
@@ -16,29 +15,33 @@
 <section id='list-page'>
 <h1>Projects</h1>
     {% if project_list %}
-    {% for project in project_list %}
-    <!-- wrapper for card -->
-        <div class="project-card">
-            {# show project header at top of card #}
-            {% if project.header_image %}
-            <a href="{% url 'project:detail' project.pk project.slug %}">
-                <img class="project-card-header" src="{{ project.header_image.url }}">
-            </a>
-            {# or default to default header #}
-            {% else %}
-            <a href="{% url 'project:detail' project.pk project.slug %}">
-                <img class="project-card-header" src="{% static 'projects/images/default_header.jpg' %}">
-            </a>
-            {% endif %}
-            <span class="project-title">
-                <a href="{% url 'project:detail' project.pk project.slug %}">{{ project.title }}</a>
-            </span>
-            <hr>
-            <span class="project-date">
-                {{ project.pub_date.date }}
-            </span>
-        </div>    
-    {% endfor %}
+    <section class='cards'>
+        {% for project in project_list %}
+        <!-- wrapper for card -->
+            <div class="card">
+                {# show project header at top of card #}
+                {% if project.header_image %}
+                <a href="{% url 'projects:detail' project.pk project.slug %}">
+                    <img src="{{ project.header_image.url }}">
+                </a>
+                {# or default to default header #}
+                {% else %}
+                <a href="{% url 'projects:detail' project.pk project.slug %}">
+                    <img class="project-card-header" src="{% static 'projects/images/default_header.jpg' %}">
+                </a>
+                {% endif %}
+                <div class="card-text">
+                    <h3>
+                        <a href="{% url 'projects:detail' project.pk project.slug %}">{{ project.title }}</a>
+                    </h3>
+                    <hr>
+                    <span class="card-date">
+                        {{ project.pub_date.date }}
+                    </span>
+                </div>
+            </div>    
+        {% endfor %}
+        </section>
     {% else %}
     <h1>Coming Soon</h1>
     {% endif %}
@@ -46,5 +49,4 @@
 {% endblock %}
 
 {% block scripts %}
-<script type="text/javascript" src="{% static 'events/events.js' %}"></script>
 {% endblock %}

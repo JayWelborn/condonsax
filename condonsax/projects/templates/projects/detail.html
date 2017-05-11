@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{# Adds page-specific header info #}
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{% static 'projects/projects.css' %}"/>
+{% if project.header_image %}
+        <style type="text/css">
+            #header-image {
+                background: url('{{ project.header_image.url }}') no-repeat center center;
+            }
+        </style>
+    {% else %}
+        <style type="text/css">
+            #header-image {
+                background: url({% static 'projects/images/default_header.jpg' %}) no-repeat center center;
+            }
+        </style>
+    {% endif %}
+{% endblock %}
+
+{# Adds title to browser tab #}
+{% block title %}Projects - {{ project.title }}{% endblock %}
+
+{# This is the content of the web page, displayed below the navbar #}
+{% block content %}
+    {# show header at top of detail page #}
+<div id='header-image'></div>
+<section id='fullpage'>
+    <h1>{{ project.title }}</h1>
+    <hr>
+    <article id='project-body'>
+        {{ project.body|safe }}
+    </article>
+</section>
+{% endblock %}

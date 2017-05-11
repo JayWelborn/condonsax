@@ -142,9 +142,9 @@ TINYMCE_DEFAULT_CONFIG = {
     'selector': 'textarea',
     'theme': 'modern',
     'plugins': 'link image preview codesample contextmenu table charmap textcolor colorpicker '
-                'hr paste textpattern',
+                'hr paste textpattern media',
     'toolbar1': 'bold italic underline forecolor backcolor| alignleft aligncenter alignright alignjustify '
-               '| bullist numlist | outdent indent | table | link image | preview code | charmap ',
+               '| bullist numlist | outdent indent | table | link image media | preview code | charmap ',
     'contextmenu': 'formats | link image | forecolor backcolor',
     'menubar': True,
     'inline': False,

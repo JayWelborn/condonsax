@@ -6,7 +6,7 @@ html {
 body {
     height: 100%;
     font-kerning: normal;
-    background-color: #203446;
+    background-color: slategray;
     color: #111;
 }
 
@@ -57,27 +57,37 @@ body {
     }
 }
 
+a {
+    text-decoration: none;
+    color: #7997a3;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #Cf7b67;
+}
+
 .portrait {
     float: right;
     width: 38%;
     margin-left: 30px;
     margin-bottom: 30px;
-}
+}   
 
 #content {
-    
-    height: 100%;
+    height: auto;
+    min-height: calc(100vh - 80px);
     width: 100%;
     margin-top: 0px;
 }
 
 #fullpage {
     width: 90%;
-    max-width: 800px;
-    padding: 30px;
+    max-width: 780px;
+    padding: 40px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 40px;
     background: #f6f7f6;
     box-shadow: 3px 3px 6px black;
@@ -92,6 +102,7 @@ body {
     font-size: 48px;
     width: 100%;
     margin-bottom: 20px;
+    margin-top: 0px;
 }
 
 #fullpage h3 {
@@ -126,7 +137,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     background: #f6f7f6;
     box-shadow: 3px 3px 6px black;
     box-sizing: border-box;
@@ -135,6 +146,7 @@ body {
     font-weight: 700;
     font-size: 48px;
     width: 100%;
+    text-align: center;
 }
 
 .card {
@@ -148,7 +160,7 @@ body {
     height: auto;
     display: inline-block;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .card img {
