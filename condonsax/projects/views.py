@@ -53,3 +53,4 @@ class TagDetailView(generic.DetailView):
     template_name = 'projects/tag_detail.html'
     context_object_name = 'tag'
     paginate_by = 6
+

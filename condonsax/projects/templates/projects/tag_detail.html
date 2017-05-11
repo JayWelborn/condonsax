@@ -13,10 +13,10 @@
 {% block content %}
 
 <section id='list-page'>
-<h1>Projects</h1>
-    {% if project_list %}
+<h1>Projects Tagged: {{ tag.title }}</h1>
+    {% if tag.projects %}
     <section class='cards'>
-        {% for project in project_list %}
+        {% for project in tag.projects.all %}
         <!-- wrapper for card -->
             <div class="card">
                 {# show project header at top of card #}
@@ -45,23 +45,8 @@
     {% else %}
     <h1>Coming Soon</h1>
     {% endif %}
-    {# pagination section if applicable #}
-    {% if is_paginated %}
-    <section class="pagination">
-        <span class="page-links">
-            {% if page_obj.has_previous %}
-            <a href="/projects/?page={{ page_obj.previous_page_number }}">previous</a>
-            {% endif %}
-            <span class="page-current">
-                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
-            </span>
-            {% if page_obj.has_next %}
-            <a href="/projects/?page={{ page_obj.next_page_number }}">next</a>
-            {% endif %}
-        </span>
-    </section>
-    {% endif %}
 </section>
 {% endblock %}
+
 {% block scripts %}
 {% endblock %}

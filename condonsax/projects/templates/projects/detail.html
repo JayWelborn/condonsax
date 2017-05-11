@@ -32,5 +32,16 @@
     <article id='project-body'>
         {{ project.body|safe }}
     </article>
+
+    {# displays links to lists of projects with common tags #}
+    {% if project.tags %}    
+        <div class="tags">
+            <h3>More About:</h3>
+
+            {% for tag in project.tags.all %}
+            <a href='{% url 'projects:tag_detail' tag.pk tag.slug %}'>{{ tag.title }}</a>
+            {% endfor %}
+        </div>
+    {% endif %}
 </section>
 {% endblock %}

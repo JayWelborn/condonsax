@@ -16,6 +16,9 @@ from albums.admin import AlbumAdmin
 from projects.models import Project, Tag
 from projects.admin import ProjectAdmin
 
+# Secret Album Admin and Model
+from hiddenalbum.models import HiddenAlbum
+
 class ChrisCondonAdmin(admin.sites.AdminSite):
     site_header = 'Chris Condon Administration'
     site_title = 'Chris Condon Administration'
@@ -33,3 +36,4 @@ condon_admin.register(Album, AlbumAdmin)
 condon_admin.register(Composer)
 condon_admin.register(Project, ProjectAdmin)
 condon_admin.register(Tag)
+condon_admin.register(HiddenAlbum)

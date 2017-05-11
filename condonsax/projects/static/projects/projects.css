@@ -6,13 +6,18 @@
     padding: 0;
 }
 
+#list-page h1 {
+    margin-bottom: 20px;
+}
+
 .card {
     max-width: 90%;
-    width: 250px;
+    width: 240px;
     max-height: 350px;
     float: left;
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 20px;
 }
 
 .card img {
@@ -37,7 +42,6 @@
 
 .card-text .card-date {
     position: relative;
-    top: -6px;
 }
 
 #header-image {
@@ -46,7 +50,8 @@
 }
 
 hr {
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #project-body p {
@@ -55,5 +60,45 @@ hr {
 
 #project-body img {
     float: left;
-    margin-right:;
+    margin-right: 20px;
+}
+
+#fullpage .tags h3 {
+    width: 100%;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 32px;
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+.tags a {
+    display: inline-block;
+    border: 1px solid grey;
+    padding: 10px 20px;
+    margin-right: 5px;
+    border-radius: 10px;
+    transition: .2s ease-in-out;
+}
+
+.tags a:hover {
+    background-color: lightgrey;
+    transition: .2s ease-in-out;
+}
+
+.pagination {
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #f6f7f6;
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    box-shadow: 3px 3px 6px black;
+    margin-top: 0px;
+}
+
+.pagination a {
+    font-weight: bold;
 }

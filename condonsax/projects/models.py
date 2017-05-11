@@ -33,7 +33,7 @@ class Project(models.Model):
     header_image = models.ImageField(upload_to='media/%Y/%m/%d', blank=True)
     pub_date = models.DateTimeField('date published', default=timezone.now)
     body = HTMLField('Body')
-    tags = models.ManyToManyField('Tag', related_name='entries', blank=True)
+    tags = models.ManyToManyField('Tag', related_name='projects', blank=True)
 
     def __str__(self):
         return self.title
