@@ -5,18 +5,18 @@
 {% block header %}
 <link rel="stylesheet" type="text/css" href="{% static 'projects/projects.css' %}"/>
 {% if project.header_image %}
-        <style type="text/css">
-            #header-image {
-                background: url('{{ project.header_image.url }}') no-repeat center center;
-            }
-        </style>
-    {% else %}
-        <style type="text/css">
-            #header-image {
-                background: url({% static 'projects/images/default_header.jpg' %}) no-repeat center center;
-            }
-        </style>
-    {% endif %}
+    <style type="text/css">
+        #header-image {
+            background: url('{{ project.header_image.url }}') no-repeat center center;
+        }
+    </style>
+{% else %}
+    <style type="text/css">
+        #header-image {
+            background: url({% static 'projects/images/default_header.jpg' %}) no-repeat center center;
+        }
+    </style>
+{% endif %}
 {% endblock %}
 
 {# Adds title to browser tab #}
