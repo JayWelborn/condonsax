@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id='fullpage'>
+<h1>{{ hiddenalbum.album.title }}</h1>
+<ol>
+    {% for track in hiddenalbum.album.tracks.all %}
+    <li>
+        <p class='track-info'>
+            <span class='title'>{{ track.title }}</span>&nbsp;&nbsp;&nbsp; 
+            <span class='composer'>{{ track.composer }}</span>
+        </p>
+        {% if track.full_audio %}
+            <audio controls>
+                <source src="{{ track.full_audio.url }}" type="audio/mp3">
+                Your browser does not support the audio tag.
+            </audio>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ol>
+</section>
+{% endblock %}

@@ -18,7 +18,7 @@ h1, h3 {
 }
 
 #homepage-text h1, h3 {
-    color: #f1f1f3;
+    color: #f0f0ef;
 }
 
 #homepage-text h1 {
@@ -26,7 +26,7 @@ h1, h3 {
     font-weight: 700;
     font-size: 48px;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     letter-spacing: 3px;
 }
 
@@ -34,7 +34,7 @@ h1, h3 {
     font-family: 'Playfair Display', serif;
     font-size: 32px;
     font-style: italic;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     letter-spacing: 3px;
 }
 
@@ -43,10 +43,10 @@ h1, h3 {
     font-weight: 400;
     font-size: 16px;
     letter-spacing: 1px;
-    background: #Cf7b67;
-    color: #f6f7f6;
-    padding: 15px 30px;
-    border-radius: 30px;
+    background: #3d6fd8;
+    color: #f0f0ef;
+    padding: 10px 20px;
+    border-radius: 10px;
     box-shadow: 3px 3px 6px black;
     transition: all .2s;
     transition-timing-function: ease-in-out;
@@ -54,7 +54,7 @@ h1, h3 {
 
 #homepage-text a:hover {
     text-decoration: none;
-    background: #765c80;
+    background: #705a79;
 }
 
 @media screen and (max-width:760px){

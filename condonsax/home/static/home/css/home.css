@@ -6,8 +6,8 @@ html {
 body {
     height: 100%;
     font-kerning: normal;
-    background-color: slategray;
-    color: #111;
+    background-color: #242033;
+    color: #222;
 }
 
 .navbar {
@@ -20,7 +20,7 @@ body {
 }
 
 .navbar-default {
-    background-image: linear-gradient(to bottom,#fff 0,#f1f1f3 100%);
+    background-image: linear-gradient(to bottom,#fff 0,#f0f0ef 100%);
     border-radius: 0;
 }
 
@@ -59,13 +59,13 @@ body {
 
 a {
     text-decoration: none;
-    color: #3f5573;
+    color: ##3d6fd8;
     transition: .1s ease-in-out;
 }
 
 a:hover {
     text-decoration: none;
-    color: #Cf7b67;
+    color: #705a79;
     transition: .1s ease-in-out;
 }
 
@@ -86,12 +86,12 @@ a:hover {
 #fullpage {
     width: 90%;
     max-width: 780px;
-    padding: 40px;
+    padding: 30px 40px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
     margin-bottom: 40px;
-    background: #f6f7f6;
+    background: #f0f0ef;
     box-shadow: 3px 3px 6px black;
     border-radius: 5px;
 }
@@ -139,7 +139,7 @@ a:hover {
     margin-right: auto;
     margin-top: 30px;
     margin-bottom: 10px;
-    background: #f6f7f6;
+    background: #f0f0ef;
     box-shadow: 3px 3px 6px black;
     box-sizing: border-box;
     border-radius: 5px;
@@ -170,7 +170,7 @@ a:hover {
 
 .card-text {
     display: block;
-    padding: 0px 30px 0px 30px;
+    padding: 0px 30px 20px 30px;
     font-family: 'Raleway';
     font-size: 15px;
 }
@@ -213,30 +213,29 @@ a:hover {
 .card-text .write-up {
     max-height: 0;
     overflow: hidden;
-    width: 100%;
     transition: .5s ease-in-out;
 }
 
 .card-text .write-up.visible {
-    max-height: 32vh;
-    width: 100%;
+    max-height: 300px;
     overflow-y: auto;
+    width: 100%;
     transition: .5s ease-in-out;
-    margin-bottom: ;
+    margin-bottom: 30px;
+    padding-top: 20px;
 }
 
 .card-text .button {
     display: inline-block;
     cursor: pointer;
-    margin-top: 10px;
     margin-left: 30px;
     text-decoration: none;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Raleway', sans-serif;
     letter-spacing: 1px;
     word-spacing: 2px;
     font-size: 14px;
     font-weight: 600;
-    background: #f6f7f6;
+    background: #f0f0ef;
     padding: 6px 12px;
     border-radius: 5px;
     transition: .2s ease-in-out;
@@ -254,6 +253,6 @@ a:hover {
 
 .card-text .button:hover {
     transition: .2s ease-in-out;
-    color: #f6f7f6;
-    background: #203446;
+    color: #f0f0ef;
+    background: #705a79;
 }

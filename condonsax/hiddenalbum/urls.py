@@ -2,14 +2,12 @@
 from django.conf.urls import url
 
 # Relative imports
-from .views import HiddenAlbumDetailView
+from .views import HiddenAlbumHomeView, HiddenAlbumDetailView
 
-app_name = 'projects'
+app_name = 'hiddenalbum'
 urlpatterns = [
-    # ex: /projects/pk/entry-slug-goes-here
-    url(r'^(?P<pk>[0-9]+)/(?P<slug>[-\w\d]+)/$', DetailView.as_view(), name='detail'),
-    # ex /projects/tags/pk/tag-slug-here
-    url(r'tags/(?P<pk>[0-9]+)/(?P<slug>[-\w\d]+)/', TagDetailView.as_view(), name='tag_detail'),
-    # ex: /projects/
-    url(r'^$', IndexView.as_view(), name='projects'),
+    # ex: /hiddenalbum/album-slug-goes-here
+    url(r'^(?P<slug>[-\w\d]+)/$', HiddenAlbumDetailView.as_view(), name='detail'),
+    # ex: /hiddenalbum
+    url(r'^$', HiddenAlbumHomeView.as_view(), name='hiddenalbum'),
 ]

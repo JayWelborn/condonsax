@@ -7,13 +7,14 @@
 }
 
 #list-page h1 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .card {
     max-width: 90%;
     width: 240px;
-    max-height: 350px;
+    height: 45vh;
+    max-height: 300px;
     float: left;
     margin-left: 0;
     margin-right: 0;

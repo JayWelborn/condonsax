@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id='fullpage'>
+    {# what displays if there is a list of hidden albums #}
+    {% if album_list %}
+        {# links to each hidden albums page #}
+        {% for hiddenalbum in album_list %}
+        <a href="{% url 'hiddenalbum:detail' hiddenalbum.slug %}">
+            <h3>{{ hiddenalbum.album.title }}</h3>
+        </a>        
+        {% endfor %}
+    {# what displays if there aren't any hidden albums #}
+    {% else %}
+    <h1>Coming Soon</h1>
+    {% endif %}
+</section>
+{% endblock %}

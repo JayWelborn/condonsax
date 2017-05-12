@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^admin/', condon_admin.urls),
     url(r'albums/', include('albums.urls')),
     url(r'^events/', include('events.urls')),
+    url(r'^hiddenalbum/', include('hiddenalbum.urls')),
     url(r'^projects/', include('projects.urls')),
     url(r'^tinymce/', include('tinymce.urls')),
     url(r'^', include('home.urls')),
