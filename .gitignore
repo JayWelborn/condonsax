@@ -27,13 +27,10 @@ condonenv/
 # IDE stuff
 .idea
 
-# local DB
-myblog.sqlite3
-
 # blog entry test
 new-entry.html
 new-entry.css
 reference.html
 
 # local media files
-/myblog/myblog/media/
+condonsax/condonsax/media/
