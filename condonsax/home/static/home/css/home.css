@@ -22,8 +22,8 @@ html {
 body {
     height: 100%;
     font-kerning: normal;
-    background: linear-gradient(181deg, #efeff1, #7287c6, #69a38f, #2c5650, #69a38f, #7287c6, #efeff1);
-    background-size: 100% 2000%;
+    background: linear-gradient(181deg, #7287c6, #69a38f, #7287c6);
+    background-size: 100% 800%;
 
     -webkit-animation: BackgroundAnimation 120s ease infinite;
     -moz-animation: BackgroundAnimation 120s ease infinite;
@@ -31,7 +31,7 @@ body {
     animation: BackgroundAnimation 120s ease infinite;
 
     
-    color: #222;
+    color: #19333b;
 }
 
 .navbar {
