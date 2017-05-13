@@ -39,9 +39,13 @@
             <h3>More About:</h3>
 
             {% for tag in project.tags.all %}
-            <a href='{% url 'projects:tag_detail' tag.pk tag.slug %}'>{{ tag.title }}</a>
+            <a class='button' href='{% url 'projects:tag_detail' tag.pk tag.slug %}'>{{ tag.title }}</a>
             {% endfor %}
         </div>
     {% endif %}
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'projects/projects.js' %}"></script>
 {% endblock %}

@@ -35,8 +35,7 @@
     font-family: 'Raleway';
     font-weight: 400;
     max-height: 200px;
-    overflow-y: auto;   
-    margin-bottom: 80px;
+    overflow-y: auto;
 }
 
 .track-list li {
@@ -68,6 +67,10 @@ p.track-info {
 @media screen and (max-width:800px){
     .card {
         padding-bottom: 45px;
+    }
+
+    .card-text {
+        width: 100%;
     }
 
     .card img.album-cover {

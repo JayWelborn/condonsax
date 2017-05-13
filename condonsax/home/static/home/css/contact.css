@@ -49,19 +49,19 @@ ul.social li {
     border-radius: 5px;
     margin: 2px;
     max-width: 100%;
-    background-color: #f0f0ef;
+    background-color: #efeff1;
     font-family: 'Raleway', sans-serif;
     font-size: 90%;
     transition: .2s ease-in-out;
 }
 
 .contact-form input[type=text]:hover, input[type=email]:hover, textarea:hover {
-    background-color: #7dabc8;
+    background-color: #69a38f;
 }
 
 .contact-form input[type=text]:focus, input[type=email]:focus, textarea:focus{
-    background-color: #fafaf9;
-    border: 2px solid #3d6fd8;
+    background-color: #efeff1;
+    border: 2px solid #7287c6;
     margin: 1px;
 }
 
@@ -74,22 +74,8 @@ ul.social li {
     resize: none;
 }
 
-.contact-form input[type=submit] {
-    font-family: 'Raleway';
-    font-weight: 400;
-    font-size: 16px;
-    letter-spacing: 1px;
-    background: #3d6fd8;
-    color: #f0f0ef;
-    padding: 5px 10px;
-    border-radius: 10px;
-    transition: all .2s;
-    transition-timing-function: ease-in-out;
-}
-
-.contact-form input[type=submit]:hover {
-    text-decoration: none;
-    background: #705a79;
+.button {
+    margin-left: 0;
 }
 
 @media screen and (max-width:470px){

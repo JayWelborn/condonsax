@@ -6,7 +6,7 @@ html {
 body {
     height: 100%;
     font-kerning: normal;
-    background-color: #242033;
+    background-color: #2c5650;
     color: #222;
 }
 
@@ -20,7 +20,7 @@ body {
 }
 
 .navbar-default {
-    background-image: linear-gradient(to bottom,#fff 0,#f0f0ef 100%);
+    background-image: linear-gradient(to bottom,#fff 0,#efeff1 100%);
     border-radius: 0;
 }
 
@@ -59,13 +59,14 @@ body {
 
 a {
     text-decoration: none;
-    color: ##3d6fd8;
+    color: #297227;
     transition: .1s ease-in-out;
+    font-weight; bold;
 }
 
 a:hover {
     text-decoration: none;
-    color: #705a79;
+    color: #7287c6;
     transition: .1s ease-in-out;
 }
 
@@ -91,7 +92,7 @@ a:hover {
     margin-right: auto;
     margin-top: 30px;
     margin-bottom: 40px;
-    background: #f0f0ef;
+    background: #efeff1;
     box-shadow: 3px 3px 6px black;
     border-radius: 5px;
 }
@@ -151,7 +152,7 @@ a:hover {
 }
 
 .card {
-    background: #f6f7f6;
+    background: #efeff1;
     -webkit-box-shadow: 3px 3px 6px black;
     -moz-box-shadow: 3px 3px 6px black;
     box-shadow: 3px 3px 6px black;
@@ -225,7 +226,7 @@ a:hover {
     padding-top: 20px;
 }
 
-.card-text .button {
+.button {
     display: inline-block;
     cursor: pointer;
     margin-left: 30px;
@@ -235,7 +236,8 @@ a:hover {
     word-spacing: 2px;
     font-size: 14px;
     font-weight: 600;
-    background: #f0f0ef;
+    background: #287227;
+    color: #efeff1;
     padding: 6px 12px;
     border-radius: 5px;
     transition: .2s ease-in-out;
@@ -251,8 +253,7 @@ a:hover {
     user-select: none;
 }
 
-.card-text .button:hover {
+.button:hover {
     transition: .2s ease-in-out;
-    color: #f0f0ef;
-    background: #705a79;
+    background: #69a38f;
 }

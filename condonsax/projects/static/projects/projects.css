@@ -46,8 +46,11 @@
 }
 
 #header-image {
-    height: 45vh;
+    height: calc(45vh + 80px);
     background-size: cover;
+    position: relative;
+    z-index: -1;
+    margin-top: -80px;
 }
 
 hr {
@@ -74,20 +77,6 @@ hr {
     letter-spacing: 1px;
 }
 
-.tags a {
-    display: inline-block;
-    border: 1px solid grey;
-    padding: 10px 20px;
-    margin-right: 5px;
-    border-radius: 10px;
-    transition: .2s ease-in-out;
-}
-
-.tags a:hover {
-    background-color: lightgrey;
-    transition: .2s ease-in-out;
-}
-
 .pagination {
     width: 100%;
     text-align: center;
@@ -102,4 +91,13 @@ hr {
 
 .pagination a {
     font-weight: bold;
+}
+
+.button {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.button:hover {
+    color: #efeff1;
 }
