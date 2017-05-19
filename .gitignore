@@ -12,6 +12,9 @@ pip-delete-this-directory.txt
 private_settings.py
 migrations
 
+# So I can edit settings in production
+settings.py
+
 # pyenv
 .python-version
 
