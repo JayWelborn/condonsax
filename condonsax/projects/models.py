@@ -30,7 +30,7 @@ class Project(models.Model):
 
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField('URL slug', max_length=100, unique=True)
-    header_image = models.ImageField(upload_to='media/%Y/%m/%d', blank=True)
+    header_image = models.ImageField('Header Image', upload_to='media/%Y/%m/%d', blank=True)
     pub_date = models.DateTimeField('date published', default=timezone.now)
     body = HTMLField('Body')
     tags = models.ManyToManyField('Tag', related_name='projects', blank=True)
